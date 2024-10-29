@@ -8,7 +8,6 @@ for _ in range(num):
     tree[node] = [left, right]
 
 def PreOrder(root):
-    print("root: " , root)
     if root != ".":
         print(root, end="")     # print
         PreOrder(tree[root][0]) # left
@@ -27,7 +26,7 @@ def PostOrder(root):
         print(root, end="")     # print
 
 PreOrder("A")
-# print()
-# InOrder("A")
-# print()
-# PostOrder("A")
+print()
+InOrder("A")
+print()
+PostOrder("A")
