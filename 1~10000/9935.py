@@ -18,12 +18,3 @@ if not stack:
     print("FRULA")
 else:
     print("".join(stack))
-
-
-# while bombStr in inputStr:
-#         inputStr = inputStr.replace(bombStr, "")
-
-# if not inputStr:
-#     print("FRULA")
-# else:
-#     print(inputStr)
