@@ -1,4 +1,4 @@
-package BOJ00001to10000.BOJ11720;
+package BOJ11720;
 
 import java.util.Scanner;
 
