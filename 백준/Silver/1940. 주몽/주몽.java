@@ -1,16 +1,20 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        int m = Integer.parseInt(br.readLine());
 
         int nList[] = new int[n];
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
         for (int i = 0; i < n; i++) {
-            nList[i] = sc.nextInt();
+            nList[i] = Integer.parseInt(st.nextToken());
         }
 
         Arrays.sort(nList);
@@ -23,9 +27,9 @@ public class Main {
             int sum = nList[start] + nList[end];
 
             if (sum == m) {
-                cnt++;
                 start++;
                 end--;
+                cnt++;
             } else if (sum > m) {
                 end--;
             } else {
