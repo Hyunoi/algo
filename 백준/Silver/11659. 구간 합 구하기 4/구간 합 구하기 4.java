@@ -7,32 +7,17 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
 
-        int nList[] = new int[n];
+        int nList[] = new int[n+1];
 
-        for (int i = 0; i < n; i++) {
-            nList[i] = sc.nextInt();
-        }
-
-        int sList[] = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            if (i == 0) {
-                sList[i] = nList[i];
-            } else {
-                sList[i] = sList[i-1] + nList[i];
-            }
+        for (int i = 1; i < n+1; i++) {
+            nList[i] = nList[i-1] + sc.nextInt();
         }
 
         for (int k = 0; k < m; k++) {
-            int i = sc.nextInt() - 1;  // 2 -> 1
-            int j = sc.nextInt() - 1;  // 4 -> 3
+            int i = sc.nextInt();
+            int j = sc.nextInt();
 
-            int result = 0;
-            if (i == 0) {
-                result = sList[j];
-            } else {
-                result = sList[j] - sList[i - 1];
-            }
+            int result = nList[j] - nList[i - 1];
             System.out.println(result);
         }
     }
